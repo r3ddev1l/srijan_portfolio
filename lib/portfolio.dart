@@ -39,16 +39,18 @@ class _PortfolioState extends State<Portfolio> {
           : null,
       body: SingleChildScrollView(
         // controller: controller,
-        child: Column(
-          children: [
-            Wrap(
-              alignment: WrapAlignment.center,
-              children: [
-                About(),
-                Education(),
-              ],
-            )
-          ],
+        child: Center(
+          child: Column(
+            children: [
+              Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  About(),
+                  Education(),
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );

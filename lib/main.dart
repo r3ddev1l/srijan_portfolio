@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'Poppins',
         primarySwatch: Colors.red,
-        canvasColor: Colors.red.shade50,
+        canvasColor: Colors.red.shade200,
         colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.red,
         ),

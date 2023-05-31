@@ -16,9 +16,8 @@ class _EducationState extends State<Education> {
       width: context.screenWidth < 900
           ? context.screenHeight * 0.9
           : context.screenHeight * 0.5,
-      decoration: const BoxDecoration(
-        color: Colors.white,
-      ),
+      decoration: BoxDecoration(
+          color: Colors.white, borderRadius: BorderRadius.circular(20.0)),
       padding: const EdgeInsets.all(30),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,12 +36,27 @@ class _EducationState extends State<Education> {
                 itemCount: 4,
                 contentsAlign: ContentsAlign.alternating,
                 contentsBuilder: (context, index) => Card(
-                  child: Container(
+                  child: Padding(
+                    padding: const EdgeInsets.all(12.0),
                     child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text("Event"),
                         const Text(
-                            "Brief Event Data adhsdjkfjksdhfjkhasdkjfhjkasdfhjkhasdjkh"),
+                          "31 May 2023",
+                          style: TextStyle(fontSize: 12, color: Colors.red),
+                        ),
+                        const Text(
+                          "Brief Event Data adhsdjkfjksdhfjkhasdkjfhjkasdfhjkhasdjkh",
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.w600),
+                        ),
+                        Text(
+                          "Brief Event Data adhsdjkfjksdhfjkhasdkjfhjkasdfhjkhasdjkh",
+                          style: TextStyle(
+                            fontSize: 14,
+                            color: Colors.grey.shade700,
+                          ),
+                        ),
                       ],
                     ),
                   ),
