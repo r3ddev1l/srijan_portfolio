@@ -13,9 +13,12 @@ class _EducationState extends State<Education> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: const EdgeInsets.only(top: 20),
       width: context.screenWidth < 900
           ? context.screenHeight * 0.9
-          : context.screenHeight * 0.5,
+          : context.screenWidth < 1600
+              ? context.screenWidth * 0.5
+              : context.screenWidth * 0.4,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(20.0)),
       padding: const EdgeInsets.all(30),
@@ -46,12 +49,12 @@ class _EducationState extends State<Education> {
                           style: TextStyle(fontSize: 12, color: Colors.red),
                         ),
                         const Text(
-                          "Brief Event Data adhsdjkfjksdhfjkhasdkjfhjkasdfhjkhasdjkh",
+                          "Data",
                           style: TextStyle(
                               fontSize: 20, fontWeight: FontWeight.w600),
                         ),
                         Text(
-                          "Brief Event Data adhsdjkfjksdhfjkhasdkjfhjkasdfhjkhasdjkh",
+                          "Data",
                           style: TextStyle(
                             fontSize: 14,
                             color: Colors.grey.shade700,

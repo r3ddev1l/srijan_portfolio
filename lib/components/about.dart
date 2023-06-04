@@ -26,79 +26,65 @@ class _AboutState extends State<About> {
           color: Colors.white, borderRadius: BorderRadius.circular(20.0)),
       padding: const EdgeInsets.all(30),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.asset(
-            devImage,
-            height: 156.0,
-          ),
-          const Text("DEV"),
-          const Text("DEV"),
-          const Wrap(
-            alignment: WrapAlignment.center,
+          Column(
             children: [
-              Chip(
-                label: Text("Mobile App Developer"),
-                labelStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14.0,
-                ),
-                backgroundColor: Colors.green,
-                padding: EdgeInsets.all(8.0),
+              Image.asset(
+                devImage,
+                height: 156.0,
               ),
-              SizedBox(
-                height: 24,
+              const Text("DEV"),
+              const Text("DEV"),
+              const Wrap(
+                alignment: WrapAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Chip(
+                      label: Text("Mobile App Developer"),
+                      labelStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14.0,
+                      ),
+                      backgroundColor: Colors.green,
+                      padding: EdgeInsets.all(4.0),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(4.0),
+                    child: Chip(
+                      label: Text("Mobile App Developer"),
+                      labelStyle: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14.0,
+                      ),
+                      backgroundColor: Colors.green,
+                      padding: EdgeInsets.all(8.0),
+                    ),
+                  ),
+                ],
               ),
-              Chip(
-                label: Text("Mobile App Developer"),
-                labelStyle: TextStyle(
-                  color: Colors.white,
-                  fontSize: 14.0,
-                ),
-                backgroundColor: Colors.green,
-                padding: EdgeInsets.all(8.0),
+              const Divider(),
+
+              //github
+              AnimatedContact(
+                icon: FontAwesomeIcons.githubAlt,
+                title: 'Github',
+                subtitle: 'RedDevil',
+                onTap: () {},
+              ),
+
+              //linkedin
+              AnimatedContact(
+                icon: FontAwesomeIcons.linkedinIn,
+                title: 'Linkedin',
+                subtitle: 'RedDevil',
+                onTap: () {},
               ),
             ],
           ),
           const Divider(),
-          // Container(
-          //   child: const Row(
-          //     children: [
-          //       Card(
-          //           child: Padding(
-          //         padding: EdgeInsets.all(12.0),
-          //         child: Icon(
-          //           FontAwesomeIcons.githubAlt,
-          //           size: 20.0,
-          //         ),
-          //       )),
-          //       SizedBox(
-          //         width: 12.0,
-          //       ),
-          //       Column(
-          //         crossAxisAlignment: CrossAxisAlignment.start,
-          //         children: [
-          //           Text("Github"),
-          //           Text("RedDevil"),
-          //         ],
-          //       )
-          //     ],
-          //   ),
-          // ),
-          //github
-          AnimatedContact(
-            icon: FontAwesomeIcons.githubAlt,
-            title: 'Github',
-            subtitle: 'RedDevil',
-            onTap: () {},
-          ),
-
-          //linkedin
-          AnimatedContact(
-            icon: FontAwesomeIcons.linkedinIn,
-            title: 'Linkedin',
-            subtitle: 'RedDevil',
-            onTap: () {},
-          ),
           const SocialRow()
         ],
       ),
